@@ -1,11 +1,12 @@
 Piranha.Bootstrap
 =================
 
-A Bootstrap template for Piranha
+A Bootstrap template for PiranhaCMS
+https://github.com/tidyui/piranha
 
-To login, the credentials are:
+To login to manager, the credentials are:
 
-Username: admin
-Password: admin
+<strong>username: admin</strong>
+<strong>Password: admin</strong>
 
 I will update this a little further later on to explain how the template works.
