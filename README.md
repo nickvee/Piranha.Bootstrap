@@ -1,7 +1,8 @@
 PiranhaCMS Bootstrap Template
 =================
 
-A Twitter Bootstrap template for PiranhaCMS. The idea behind this i basically to show you how to extend PiranhaCMS to cater for Bootstrap style navigation.
+A Twitter Bootstrap template for PiranhaCMS. 
+The idea behind this is to show you how to extend PiranhaCMS to cater for a Bootstrap style navigation.
 
 https://github.com/tidyui/piranha
 
