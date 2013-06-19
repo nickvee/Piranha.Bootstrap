@@ -6,7 +6,7 @@ The idea behind this is to show you how to extend PiranhaCMS to cater for a Boot
 
 You can check out PiranhaCMS here: https://github.com/tidyui/piranha
 
-To login to manager, the credentials are:
+To login to the manager, the credentials are:
 
 <strong>username: admin</strong>
 <strong>Password: admin</strong>
