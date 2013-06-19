@@ -2,6 +2,7 @@ Piranha.Bootstrap
 =================
 
 A Bootstrap template for PiranhaCMS
+
 https://github.com/tidyui/piranha
 
 To login to manager, the credentials are:
