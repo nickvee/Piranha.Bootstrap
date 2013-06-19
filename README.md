@@ -1,7 +1,7 @@
 PiranhaCMS with Bootstrap
 =================
 
-A Bootstrap template for PiranhaCMS
+A Twitter Bootstrap template for PiranhaCMS
 
 https://github.com/tidyui/piranha
 
