@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "" ;
+    
+    List<Piranha.Entities.Post> posts = null ;
+    using (var db = new Piranha.DataContext()) {
+        posts = db.Posts.OrderByDescending(p => p.Published).ToList() ;
+    }
+}
+<h2>Archive</h2>
+@if (posts.Count > 0) {
+    foreach (var post in posts) {
+        <article class="post">
+            <header>
+                <h3><a href="@UI.Permalink(post.PermalinkId)">@post.Title</a></h3>
+                <p><small>Published: @post.Published.Value.ToShortDateString()</small></p>
+            </header>
+            <p>@post.Excerpt</p>
+        </article>
+        <hr />
+    }
+} else {
+    <p>There's currently no posts available</p>
+}

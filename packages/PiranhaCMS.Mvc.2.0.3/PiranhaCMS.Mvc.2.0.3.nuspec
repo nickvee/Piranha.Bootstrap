@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>PiranhaCMS.Mvc</id>
+    <version>2.0.3</version>
+    <title>Piranha CMS Mvc</title>
+    <authors>Håkan Edling</authors>
+    <owners>Håkan Edling</owners>
+    <licenseUrl>http://www.gnu.org/copyleft/lesser.html</licenseUrl>
+    <projectUrl>http://github.com/tidyui/piranha/</projectUrl>
+    <iconUrl>http://piranhacms.org/content/img/nuget.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core package for building Piranha CMS web sites with ASP.NET Mvc. It is dependent on the PiranhaCMS.Core package and contains routing for Mvc, helpers and base classes.
+
+This package can't be installed in the same project as the PiranhaCMS.WebPages package as there will be MEF import collisions between the route handlers.</description>
+    <summary>Core package for building Piranha CMS web sites with ASP.NET Mvc.</summary>
+    <releaseNotes>See the changelog available at:
+http://piranhacms.org/home/changelog</releaseNotes>
+    <copyright>Håkan Edling</copyright>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="PiranhaCMS.Core" version="2.0.3" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

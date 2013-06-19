@@ -1,0 +1,29 @@
+﻿<configuration>
+  <system.web>
+    <authentication mode="Forms">
+      <forms name="PiranhaCMS" timeout="30"/>
+    </authentication>
+    <sessionState timeout="30"/>
+    <pages controlRenderingCompatibilityVersion="4.0" />
+  </system.web>
+  <system.webServer>
+    <modules>
+      <remove name="UrlRoutingModule-4.0"/>
+      <add name="UrlRoutingModule-4.0" type="System.Web.Routing.UrlRoutingModule" preCondition=""/>
+    </modules>
+    <urlCompression doStaticCompression="true"/>
+  </system.webServer>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <serviceAuthorization serviceAuthorizationManagerType="Piranha.Web.APIKeyAuthorization, Piranha" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
+  </system.serviceModel>
+  <connectionStrings>
+    <add name="piranha" connectionString="data source=|DataDirectory|Piranha.sdf" providerName="System.Data.SqlServerCe.4.0"/>
+  </connectionStrings>
+</configuration>
