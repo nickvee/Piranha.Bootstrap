@@ -1,0 +1,13 @@
+﻿@model Piranha.Models.PageModel
+@{
+    ViewBag.Title = @Model.Page.Title ;
+}
+<div class="row">
+    <div class="span9">
+        <h1>@Model.Page.Title</h1>
+        @Model.Regions.Content
+    </div>
+    <div class="span3">
+        @Html.Partial("Sidebar")
+    </div>
+</div>

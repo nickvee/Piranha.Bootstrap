@@ -1,0 +1,95 @@
+﻿@import url('bootstrap.min.css');
+
+body {
+    font-size: 15px;
+    line-height: 20px;
+    }
+.wrapper {
+    max-width: 940px;
+    min-size: 300px;
+    padding: 0 10px;
+    margin: 0 auto;
+    }
+.content {
+    position: relative;
+    }
+.main {
+    margin-right: 280px;
+    }
+.sidebar {
+    width: 260px;
+    margin-left: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+.ingress {
+    font-size: 18px;
+    line-height: 24px;
+    color: #999;
+    }
+    
+/**
+ * Header
+ */
+header[role="banner"] {
+    background: #f8f8f8;
+    border-bottom: solid 1px #eee;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    }
+.site-title {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 50px;
+    color: #444;
+    }
+.site-title:hover {
+    color: #444;
+    text-decoration: none;
+    }
+.site-desc {
+    color: #666;
+    font-style: italic;
+    }
+    
+/**
+ * Main navigation
+ */
+.menu {
+    margin: 0;
+    overflow: hidden;
+    }
+.menu li {
+    list-style-type: none;
+    float: left;
+    display: block;
+    background: #999;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-right: 6px;
+    }
+.menu li.active, .menu li.active-child {
+    background: #666;
+    }
+.menu li a {
+    color: #fff;
+    text-shadow: rgba(0,0,0,0.3) 1px 1px 1px;
+    }
+    
+    
+/** 
+ * Simple media query
+ */
+@media (max-width: 768px) {
+    .main {
+        margin: 0;
+        }
+    .sidebar {
+        border-top: 1px #eee solid;
+        position: relative;
+        width: auto;
+        margin: 20px 0 0;
+        padding: 10px 0 0;
+        }
+    }

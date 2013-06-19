@@ -1,0 +1,32 @@
+﻿@using Piranha
+@using Piranha.Entities
+@{
+    Layout = "";
+    List<Post> posts = null;
+    using (var db = new DataContext())
+    {
+        posts = db.Posts.OrderBy(p => p.Published).ToList();
+    }
+}
+<h2>Sidebar</h2>
+
+@if (posts.Count > 0)
+{
+    <div class="well" style="max-width: 340px; padding: 8px 0;">
+        <ul class="nav nav-list">
+            <li class="nav-header">Archive of Posts</li>
+            @foreach (Post post in posts)
+            {
+                <li class="@post.GetActiveClass()">
+                    <a href="@UI.Permalink(post.PermalinkId)">@post.Title</a>
+                </li>
+            }
+        </ul>
+    </div>
+}
+else
+{
+    <p>There's currently no posts available</p>
+}
+
+

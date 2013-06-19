@@ -1,0 +1,30 @@
+﻿@using Piranha.Models
+@{
+    IEnumerable<Sitemap> sitemap = Sitemap.GetStructure().Where(x => !x.IsHidden && x.IsPublished);
+    
+    <ul class="nav">
+        @foreach (Sitemap page in sitemap)
+        {
+            if (page.Pages.Count == 0)
+            {
+                <li class="@page.GetActiveClass()">
+                    <a href="@page.Permalink()">@page.Title</a>
+                </li>
+            }
+            else
+            {
+                <li class="dropdown @page.GetActiveClass()">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="@page.Permalink()">@page.Title <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        @foreach (Sitemap subPage in page.Pages.Where(x => !x.IsHidden && x.IsPublished))
+                        {
+                            <li class="@subPage.GetActiveClass()">
+                                <a href="@subPage.Permalink()">@subPage.Title</a>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            }
+        }
+    </ul>
+}

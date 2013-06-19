@@ -1,0 +1,25 @@
+﻿@using Piranha
+@using Piranha.Entities
+@{
+    Layout = "";
+    List<Post> posts = null;
+    using (var db = new DataContext())
+    {
+        posts = db.Posts.Where(x => x.Categories.Any(u => u.Name == "Special Posts FrontPage")).OrderBy(x => x.Published).Take(3).ToList();
+    }
+}
+<div class="row">
+    @if (posts.Count > 0)
+    {
+        foreach (Post post in posts)
+        {
+            <div class="span4">
+                <h2>@post.Title</h2>
+                <p>@post.Excerpt</p>
+                <p>
+                    <a href="@UI.Permalink(post.PermalinkId)" class="btn">Learn more »</a>
+                </p>
+            </div>
+        }
+    }
+</div>

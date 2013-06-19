@@ -1,0 +1,14 @@
+﻿@model Piranha.Models.PostModel
+@{  
+    ViewBag.Title = Model.Post.Title;
+}
+<div class="row">
+    <div class="span9">
+        <h1>@Model.Post.Title</h1>
+        <blockquote>@Model.Post.Excerpt</blockquote>
+        @Model.Post.Body
+    </div>
+    <div class="span3">
+        @Html.Partial("Sidebar")
+    </div>
+</div>

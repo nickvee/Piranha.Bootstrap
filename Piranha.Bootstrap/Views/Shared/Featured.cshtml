@@ -1,0 +1,28 @@
+﻿@using Piranha
+@using Piranha.Entities
+@{
+    Layout = "";
+    List<Post> posts = null;
+    using (var db = new DataContext())
+    {
+        posts = db.Posts.Where(x => x.Categories.Any(u => u.Name == "Featured Hero Unit")).OrderBy(x => x.Published).Take(1).ToList();
+    }
+}
+
+<div class="hero-unit">
+
+    @if (posts.Count > 0)
+    {
+        foreach (Post post in posts)
+        {
+            <h1>@post.Title</h1>
+            <p>@post.Excerpt</p>
+            <p><a href="@UI.Permalink(post.PermalinkId)" class="btn btn-primary btn-large">Learn more »</a></p>
+        }
+    }
+    else
+    {
+        <p>There's currently no posts available</p>
+    }
+
+</div>
