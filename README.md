@@ -1,4 +1,4 @@
-Piranha.Bootstrap
+PiranhaCMS with Bootstrap
 =================
 
 A Bootstrap template for PiranhaCMS
