@@ -112,7 +112,7 @@ namespace System.Web.Mvc
             }
 
             //Return the html
-            return String.Format("{0}<a {1} href='{2}'>{3}</a>{4}", before, css, url, linkText, after);
+            return String.Format("{0}<a {1} href=\"{2}\">{3}</a>{4}", before, css, url, linkText, after);
         }
         
         private enum LinkType
