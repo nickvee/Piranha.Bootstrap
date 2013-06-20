@@ -1,5 +1,5 @@
 ﻿@model Piranha.Models.PostModel
-@{  
+@{
     ViewBag.Title = Model.Post.Title;
 }
 <div class="row">
@@ -7,6 +7,7 @@
         <h1>@Model.Post.Title</h1>
         <blockquote>@Model.Post.Excerpt</blockquote>
         @Model.Post.Body
+        @Model.EditLink(before: "<p><i class=\"icon-edit\"></i> ", after: "</p>", linkText: String.Format("Edit {0}", Model.Post.Title))
     </div>
     <div class="span3">
         @Html.Partial("Sidebar")

@@ -16,6 +16,7 @@
             <div class="span4">
                 <h2>@post.Title</h2>
                 <p>@post.Excerpt</p>
+                @post.EditLink(before: "<p><i class=\"icon-edit\"></i> ", after: "</p>", linkText: String.Format("Edit {0}", post.Title))
                 <p>
                     <a href="@UI.Permalink(post.PermalinkId)" class="btn">Learn more »</a>
                 </p>

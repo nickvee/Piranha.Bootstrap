@@ -17,6 +17,7 @@
         {
             <h1>@post.Title</h1>
             <p>@post.Excerpt</p>
+            @post.EditLink(before: "<p><i class=\"icon-edit\"></i> ", after: "</p>", linkText: String.Format("Edit {0}", post.Title))
             <p><a href="@UI.Permalink(post.PermalinkId)" class="btn btn-primary btn-large">Learn more »</a></p>
         }
     }

@@ -1,11 +1,12 @@
 ﻿@model Piranha.Models.PageModel
 @{
-    ViewBag.Title = @Model.Page.Title ;
+    ViewBag.Title = @Model.Page.Title;
 }
 <div class="row">
     <div class="span9">
         <h1>@Model.Page.Title</h1>
         @Model.Regions.Content
+        @Model.EditLink(before: "<p><i class=\"icon-edit\"></i> ", after: "</p>", linkText: String.Format("Edit {0}", Model.Page.Title))
     </div>
     <div class="span3">
         @Html.Partial("Sidebar")

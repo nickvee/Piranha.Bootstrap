@@ -20,7 +20,7 @@ namespace Piranha.Bootstrap
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            Piranha.WebPages.WebPiranha.PrefixlessPermalinks = true;
+            WebPages.WebPiranha.PrefixlessPermalinks = true;
 
         }
     }
