@@ -121,7 +121,7 @@ namespace System.Web.Mvc
             return uri.GetLeftPart(UriPartial.Authority);
         }
 
-        public enum LinkType
+        private enum LinkType
         {
             Page = 0,
             Post = 1
